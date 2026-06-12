@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "g++ build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "main.cpp",
+                "func.cpp",
+                "-o",
+                "build/app",
+                "`pkg-config","--cflags","--libs","opencv4`"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
